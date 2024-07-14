@@ -4,6 +4,7 @@ import {
   portfolioData2,
   portfolioData3,
   testimonailData,
+  logos,
 } from "./assets/index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -151,4 +152,119 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /*
+  Canvas backgound animation
+  */
+
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    logos.forEach((logo, index) => {
+      const image = new Image();
+      image.src = logo.src;
+
+      for (let i = 0; i < logos.length; i++) {
+        if (i !== index && isColliding(logo, logos[i])) {
+          logo.x += logo.speedX;
+          logo.y += logo.speedY;
+
+          if (logo.x > canvas.width) {
+            logo.x = -100;
+          } else if (logo.x < -100) {
+            logo.x = canvas.width;
+          }
+          if (logo.y > canvas.height) {
+            logo.y = -100;
+          } else if (logo.y < -100) {
+            logo.y = canvas.height;
+          }
+
+          break;
+        }
+      }
+
+      ctx.drawImage(image, logo.x, logo.y, 35, 35);
+
+      logo.x += logo.speedX;
+      logo.y += logo.speedY;
+
+      if (logo.x > canvas.width) {
+        logo.x = -100;
+      } else if (logo.x < -100) {
+        logo.x = canvas.width;
+      }
+      if (logo.y > canvas.height) {
+        logo.y = -100;
+      } else if (logo.y < -100) {
+        logo.y = canvas.height;
+      }
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  function isColliding(logo1, logo2) {
+    return (
+      logo1.x < logo2.x + 40 &&
+      logo1.x + 40 > logo2.x &&
+      logo1.y < logo2.y + 40 &&
+      logo1.y + 40 > logo2.y
+    );
+  }
+
+  draw();
+
+  canvas.addEventListener("mousemove", handleMouseMove);
+
+  function handleMouseMove(event) {
+    const mouseX = event.clientX - canvas.getBoundingClientRect().left;
+    const mouseY = event.clientY - canvas.getBoundingClientRect().top;
+
+    logos.forEach((logo) => {
+      if (
+        mouseX >= logo.x &&
+        mouseX <= logo.x + 40 &&
+        mouseY >= logo.y &&
+        mouseY <= logo.y + 40
+      ) {
+        const targetX = Math.random() * (canvas.width - 40);
+        const targetY = Math.random() * (canvas.height - 40);
+        smoothMove(logo, targetX, targetY);
+      }
+    });
+  }
+
+  function smoothMove(logo, targetX, targetY) {
+    const duration = 500;
+    const start = performance.now();
+    const startX = logo.x;
+    const startY = logo.y;
+
+    function move(currentTime) {
+      const elapsed = currentTime - start;
+      const progress = elapsed / duration;
+
+      if (progress >= 1) {
+        logo.x = targetX;
+        logo.y = targetY;
+      } else {
+        logo.x = startX + (targetX - startX) * ease(progress);
+        logo.y = startY + (targetY - startY) * ease(progress);
+        requestAnimationFrame(move);
+      }
+    }
+
+    requestAnimationFrame(move);
+  }
+
+  function ease(t) {
+    return t;
+  }
 });

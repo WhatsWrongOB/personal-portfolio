@@ -227,8 +227,11 @@ body::-webkit-scrollbar-button {
   visibility: visible;
 }
 
-
-#modal{
+#modal {
   backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+aside{
+  backdrop-filter: blur(6px);
 }

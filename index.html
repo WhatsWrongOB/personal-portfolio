@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 
+      For seo purposes
+     -->
+  <meta name="keywords" content="Obaid Portfolio Website" />
+  <meta name="deescription" content="Obaid Ali Full Stack Developer Portfolio Website" />
+  <!-- 
+       Fac icon
+     -->
+  <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
+  <!-- 
+       Title
+     -->
+  <title>Personal Portfoio</title>
+
+  <!--
+     Taiwind css cdn
+     -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--
+     Custo css
+     -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+     Font Awesome CDN
+     -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body class="w-screen h-auto">
+
+  <!-- 
+    Modal
+   -->
+
+  <div id="modal" class="hidden w-full h-screen fixed top-0 left-0 z-50  justify-center items-center">
+    <div
+      class="sidebar_animation flex justify-center items-center w-[670px] h-[250px] section-border bg-[#202021] rounded-2xl">
+      <div class="w-[25%] h-full flex justify-center items-start">
+        <div class="mt-10 section-border w-[60px] xl:w-[80px] h-[60px] xl:h-[80px] bg-[#383839] rounded-2xl">
+          <img src="./images/avatar-1.png" alt="avatar" />
+        </div>
+      </div>
+      <div class="w-[75%] pr-5 relative">
+        <i id="close_modal" class="cursor-pointer fa-solid fa-close text-white absolute right-7 top-[-5px]"></i>
+        <h1 class="text-white text-[1.7rem] font-semibold"></h1>
+        <p class="text-[#bababa] text-[1.05rem] font-semibold pt-1"></p>
+        <p class="text-white text-[0.95rem] pt-2">
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    Starting Point
+   -->
+
+  <main
+    class="w-full h-auto flex flex-col xl:flex-row justify-center items-center xl:items-start gap-3 sm:gap-4 xl:gap-6 xl:py-12 py-6 pb-10 xl:pb-12">
+    <!-- 
+          Sidebar
+       -->
+
+    <aside
+      class="w-[94%] md:w-[75%] xl:w-[22%] h-auto xl:h-[130vh] section-border bg-[#202021] rounded-2xl xl:sticky xl:top-[50px]">
+      <div
+        class="relative xl:static h-auto xl:h-[350px] flex xl:flex-col xl:justify-center items-center gap-4 pt-5 pb-6 xl:pb-0 pl-5 xl:pl-0">
+        <button class="absolute xl:static text-sm text-[#f3da4e] font-semibold right-[15px] top-[7px] xl:hidden"
+          id="hamburger">
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+        <div
+          class="mt-3 xl:mt-0 w-[80px] xl:w-[160px] h-[80px] xl:h-[160px] bg-[#383839] rounded-2xl xl:rounded-[30px]">
+          <img src="./images/my-avatar.png" alt="me" />
+        </div>
+        <div class="flex flex-col justify-center xl:items-center gap-2 xl:gap-4 pt-4">
+          <h1 class="text-[1.17rem] text-white sm:text-[1.45rem] xl:text-[1.6rem] font-semibold">
+            Obaid Siddiqui
+          </h1>
+          <div
+            class="w-[115px] sm:w-[130px] p-[6px] bg-[#2B2B2C] text-xs font-semibold text-white rounded-xl text-center shadow-xl">
+            Web Developer
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden xl:block sidebar_animation" id="sidebar_menu">
+        <div>
+          <div class="flex justify-center items-center">
+            <div class="w-[75%] section-border"></div>
+          </div>
+
+          <div class="w-full h-[270px] flex-col justify-between xl:items-center mt-9 pl-5 flex">
+            <div class="mb-5 xl:mb-0">
+              <div class="w-[250px] flex items-center justify-start gap-4">
+                <div
+                  class="w-[50px] h-[50px] bg-[#202022] rounded-2xl flex justify-center items-center section-border shadow-xl">
+                  <img class="w-[40%]" src="/images/icon-app.svg" alt="avatar" />
+                </div>
+                <div>
+                  <h6 class="text-gray-300 text-sm">Email</h6>
+                  <p class="text-white text-xs">obaidbro9@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-5 xl:mb-0">
+              <div class="w-[250px] flex items-center justify-start gap-4">
+                <div
+                  class="w-[50px] h-[50px] bg-[#202022] rounded-2xl flex justify-center items-center section-border shadow-xl">
+                  <img class="w-[40%]" src="/images/icon-design.svg" alt="avatar" />
+                </div>
+                <div>
+                  <h6 class="text-gray-300 text-sm">Phone</h6>
+                  <p class="text-white text-xs">+92320487266</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-5 xl:mb-0">
+              <div class="w-[250px] flex items-center justify-start gap-4">
+                <div
+                  class="w-[50px] h-[50px] bg-[#202022] rounded-2xl flex justify-center items-center section-border shadow-xl">
+                  <img class="w-[40%]" src="/images/icon-design.svg" alt="avatar" />
+                </div>
+                <div>
+                  <h6 class="text-gray-300 text-sm">Birthday</h6>
+                  <p class="text-white text-xs">12 June, 2003</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-5 xl:mb-0">
+              <div class="w-[250px] flex items-center justify-start gap-4">
+                <div
+                  class="w-[50px] h-[50px] bg-[#202022] rounded-2xl flex justify-center items-center section-border shadow-xl">
+                  <img class="w-[40%]" src="/images/icon-dev.svg" alt="avatar" />
+                </div>
+                <div>
+                  <h6 class="text-gray-300 text-sm">Address</h6>
+                  <p class="text-white text-xs">Samanabad, Lahore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center mt-5 xl:mt-8">
+          <div class="w-[75%] section-border"></div>
+        </div>
+
+        <div class="w-full flex justify-center items-center gap-[20px] xl:gap-5 xl:mt-5 py-7 xl:py-2">
+          <i class="fa-brands fa-facebook text-gray-300 text-xl"></i>
+          <i class="fa-brands fa-instagram text-gray-300 text-xl"></i>
+          <i class="fa-brands fa-github text-gray-300 text-xl"></i>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 
+           Main
+       -->
+    <section
+      class="about w-[94%] md:w-[75%] xl:w-[67%] h-[auto] section-border rounded-2xl bg-[#202021] relative overflow-hidden mb-7 xl:mb-0">
+      <!-- 
+            Menu
+        -->
+
+      <div
+        class="w-full xl:w-[440px] h-[60px] section-border bg-[#282829] rounded-2xl fixed bottom-0 right-0 xl:absolute xl:right-[-10px] xl:top-[-5px] xl:block z-40 flex justify-center items-center">
+        <ul
+          class="w-full h-full flex gap-6 xl:gap-7 justify-center xl:justify-around items-center pl-6 xl:pl-4 pr-5 pt-5 pb-6">
+          <button data-nav-link="about">
+            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+              About
+            </li>
+          </button>
+          <button data-nav-link="skills">
+            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+              Skills
+            </li>
+          </button>
+
+          <button data-nav-link="portfolio">
+            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+              Portfolio
+            </li>
+          </button>
+
+          <button data-nav-link="contact">
+            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+              Contact
+            </li>
+          </button>
+        </ul>
+      </div>
+
+      <!-- 
+          About
+        -->
+
+      <article data-page="about" class="sidebar_animation">
+        <div class="w-[95%] pl-4 xl:pl-8 pt-4 md:pt-9">
+          <h1 class="text-[1.35rem] xl:text-[1.9rem] font-bold text-white">
+            About Me
+          </h1>
+
+          <div class="w-[50px] style-border mt-2 rounded-2xl"></div>
+          <p class="text-base font-medium text-[#dcdada] pt-7 pb-4 leading-6">
+            An experienced Full-Stack Developer with extensive knowledge in
+            Web Development using HTML, CSS/ Frameworks, JavaScript, MERN
+            Stack
+          </p>
+          <p class="text-base font-medium text-[#dcdada] leading-6">
+            I love collaborating to turn visions into pixel-perfect reality.
+            My aim is to strike the perfect balance between aesthetics and
+            functionality, ensuring every project exceeds expectations. When
+            not coding, you might find me exploring nature or diving into a
+            new book.
+          </p>
+
+          <a class="mt-6" href="./images/obaid-resume.pdf" target="_blank">
+            <button class="btn-79 text-[0.8rem]">
+              <span>Download Cv</span>
+            </button>
+          </a>
+        </div>
+
+        <!-- 
+           Services
+          -->
+
+        <div class="pl-2 xl:pl-8 pt-5">
+          <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0">
+            What I'm Doing
+          </h1>
+          <div class="mt-8 flex items-center flex-col xl:flex-row gap-5 g-[#212123]">
+            <div class="w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border">
+              <div class="w-[25%] flex justify-end pb-9 pr-5">
+                <img class="w-1/2 md:w-[30%]" src="./images/icon-dev.svg" alt="name" />
+              </div>
+              <div class="w-[75%] pr-3 pb-1">
+                <h4 class="text-white xl:text-[1.15rem] font-medium">
+                  Frontend Development
+                </h4>
+                <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+                  The most modern and high-quality design made at a
+                  professional level
+                </p>
+              </div>
+            </div>
+
+            <div class="w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border">
+              <div class="w-[25%] flex justify-end pb-9 pr-5">
+                <img class="w-1/2 md:w-[30%]" src="./images/icon-design.svg" alt="name" />
+              </div>
+              <div class="w-[75%] pr-3 pb-1">
+                <h4 class="text-white xl:text-[1.15rem] font-medium">
+                  Backend Development
+                </h4>
+                <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+                  The modern and high-quality application made at a
+                  professional level
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 flex gap-5 items-center flex-col xl:flex-row">
+            <div class="w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border">
+              <div class="w-[25%] flex justify-end pb-9 pr-5">
+                <img class="w-1/2 md:w-[30%]" src="./images/icon-dev.svg" alt="name" />
+              </div>
+              <div class="w-[75%] pr-3 pb-1">
+                <h4 class="text-white xl:text-[1.15rem] font-medium">
+                  Fullstack Development
+                </h4>
+                <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+                  The modern and high-quality application made at a
+                  professional level
+                </p>
+              </div>
+            </div>
+
+            <div class="w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border">
+              <div class="w-[25%] flex justify-end pb-9 pr-5">
+                <img class="w-1/2 md:w-[30%]" src="./images/icon-design.svg" alt="name" />
+              </div>
+              <div class="w-[75%] pr-3 pb-1">
+                <h4 class="text-white xl:text-[1.15rem] font-medium">
+                  Web Design
+                </h4>
+                <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+                  The most modern and high-quality design made at a
+                  professional level
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 
+              Testimonials
+             -->
+
+          <div class="pl-2 xl:pl-3 pt-10 pb-10">
+            <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0">
+              Testimonials
+            </h1>
+            <div id="testimonial_section" class="flex gap-7 overflow-x-auto has-scrollbar pb-8">
+
+
+              <!-- Card Dynamically with Javascrpit -->
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 
+           Portfolio
+        -->
+
+      <article class="sidebar_animation" data-page="portfolio">
+        <div class="w-[95%] pl-6 xl:pl-8 pt-5 md:pt-9">
+          <h1 class="text-[1.3rem] xl:text-[1.9rem] font-bold text-white">
+            My Portfolio
+          </h1>
+
+          <div class="w-[50px] style-border mt-2 rounded-2xl"></div>
+        </div>
+
+        <div id="portfolio_section_1"
+          class="w-full flex flex-col xl:flex-row justify-around items-center mt-10 xl:gap-0 gap-10">
+
+          <!-- 
+       Projects Come Dynamicaly
+   -->
+        </div>
+
+        <div id="portfolio_section_2"
+          class="w-full flex flex-col xl:flex-row justify-around items-center ipl-2 mt-8 xl:gap-0 gap-10">
+          <!-- 
+      Projects show Dynamicaly
+   -->
+
+        </div>
+
+        <div id="portfolio_section_3"
+          class="w-full flex flex-col xl:flex-row justify-around items-center ipl-2 mt-8 xl:gap-0 gap-10 pb-7">
+          <!-- 
+    Projects show Dynamicaly
+   -->
+        </div>
+      </article>
+
+      <!-- 
+           Skills
+         -->
+
+      <article data-page="skills" class="sidebar_animation">
+        <div class="w-[95%] pl-6 xl:pl-8 pt-5 md:pt-9">
+          <h1 class="text-[1.3rem] xl:text-[1.9rem] font-bold text-white">
+            My Skills
+          </h1>
+
+          <div class="w-[50px] style-border mt-2 rounded-2xl"></div>
+        </div>
+
+        <div class="pl-2 xl:pl-6 pt-2">
+          <div id="skills_section" class="mt-8 flex items-center flex-wrap gap-5 g-[#212123] pb-7">
+            <!-- 
+               Skills Card here dynamically with Javascript
+             -->
+          </div>
+        </div>
+      </article>
+
+      <!-- 
+          Contact
+       -->
+
+      <article data-page="contact" class="sidebar_animation">
+        <div class="w-[95%] pl-6 xl:pl-8 pt-5 md:pt-9">
+          <h1 class="text-[1.3rem] xl:text-[1.9rem] font-bold text-white">
+            Contact me
+          </h1>
+
+          <div class="w-[50px] style-border rounded-2xl"></div>
+        </div>
+
+        <!-- 
+           Contact Form Section
+         -->
+
+        <div class="w-full flex flex-col justify-around items-center mt-4">
+          <div class="w-[95%] h-[300px] mt-7 rounded-2xl overflow-hidden section-border">
+            <iframe class="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27204.577556435703!2d74.2774848154335!3d31.535907827046934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919034290e373e1%3A0xd0f8fba9b24cd969!2sSamanabad%20Town%2C%20Lahore%2C%20Punjab%2054000%2C%20Pakistan!5e0!3m2!1sen!2s!4v1720098029987!5m2!1sen!2s"
+              height="450" loading="lazy"></iframe>
+          </div>
+
+          <div class="w-[95%] h-auto xl:h-auto mt-9 mb-4">
+           
+            <!-- 
+               Contact Form 
+             -->
+
+            <form>
+              <div class="flex flex-col xl:flex-row justify-around gap-3 mb-4">
+                <input
+                  class="bg-transparent section-border text-white inline-block w-full xl:w-[48%] p-3 text-sm rounded-2xl"
+                  type="text" placeholder="Username" />
+                <input
+                  class="bg-transparent section-border text-white inline-block w-full xl:w-[48%] p-3 text-sm rounded-2xl"
+                  type="email" placeholder="Email" />
+              </div>
+              <textarea
+                class="h-60 bg-transparent section-border text-white inline-block w-full pt-4 pl-5 text-sm rounded-2xl"
+                placeholder="Message"></textarea>
+              <div class="w-full flex justify-center xl:justify-end items-center mt-3">
+                <button class="text-white w-[97%] xl:w-[200px] section-border py-3 bg-[#fbc05a] text-base rounded-xl">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- 
+      JavaScript
+    -->
+
+  <script src="script.js" type="module"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

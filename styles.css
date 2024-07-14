@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2024 @obaidali
+ */
+
+body {
+  font-family: "Poppins", "Gill Sans", "Gill Sans MT";
+  background-color: #111111;
+  overflow-x: hidden;
+}
+
+/*-----------------------------------*\
+  Scroll Bar
+\*-----------------------------------*/
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #111111;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 5px solid var(--smoky-black);
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+    inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+body::-webkit-scrollbar-button {
+  height: 60px;
+}
+
+/*-----------------------------------*\
+  Sidebar
+\*-----------------------------------*/
+
+.border {
+  border: 1px solid red;
+}
+
+.section-border {
+  border: 1px solid #4b4a4a;
+}
+
+.style-border {
+  border: 3px solid #fec462;
+}
+
+.skill-border {
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 26%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+}
+
+.blog_border {
+  box-shadow: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+  border-bottom: 2px solid #fec462;
+}
+
+.contact-bg {
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  background: linear-gradient(
+    to bottom right,
+    hsl(240, 1%, 25%) 3%,
+    hsl(0, 0%, 19%) 97%
+  );
+}
+
+.has-scrollbar {
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: hsl(240, 1%, 17%);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(45, 100%, 72%);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 20px;
+}
+
+.sidebar_animation {
+  opacity: 1;
+  visibility: visible;
+  animation: fade 0.5s ease backwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#blog-card {
+  margin: 20px 0px;
+}
+
+/* _________________Buttton____________ */
+
+.btn-79,
+.btn-79 *,
+.btn-79 :after,
+.btn-79 :before,
+.btn-79:after,
+.btn-79:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-79 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn-79:disabled {
+  cursor: default;
+}
+.btn-79:-moz-focusring {
+  outline: auto;
+}
+.btn-79 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-79 [hidden] {
+  display: none;
+}
+.btn-79 {
+  --height: 80px;
+  background: none;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  height: var(--height);
+  -webkit-mask-image: none;
+  padding: 0 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.btn-79 span {
+  font-weight: 900;
+  mix-blend-mode: difference;
+}
+.btn-79:before {
+  background: #fec462;
+  border-radius: 20px;
+  content: "";
+  height: calc(var(--height) / 1.7);
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+  width: calc(var(--height) / 1.7);
+}
+.btn-79:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .btn-79 {
+    font-size: 0.75rem;
+    color: white;
+  }
+}
+
+#link {
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+#portfolio_card:hover #link {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+#modal{
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.5);
+}

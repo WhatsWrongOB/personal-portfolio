@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="./images/avatar-1.png" alt="${data.name}" />
           </div>
           <div class="w-[75%] text-center pt-4 pb-3">
-            <h4 class="text-white text-[1.2rem] xl:text-[1.25rem] font-medium">
+            <h4 class="text-white text-[1.05rem] xl:text-[1.25rem] font-medium">
               ${data.name}
             </h4>
             <p class="text-[0.93rem] font-medium text-[#c7c5c5] pt-2">
@@ -156,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /*
   Canvas backgound animation
   */
-
   const canvas = document.getElementById("myCanvas");
   const ctx = canvas.getContext("2d");
 
@@ -169,54 +168,49 @@ document.addEventListener("DOMContentLoaded", () => {
     logos.forEach((logo, index) => {
       const image = new Image();
       image.src = logo.src;
-
-      for (let i = 0; i < logos.length; i++) {
-        if (i !== index && isColliding(logo, logos[i])) {
-          logo.x += logo.speedX;
-          logo.y += logo.speedY;
-
-          if (logo.x > canvas.width) {
-            logo.x = -100;
-          } else if (logo.x < -100) {
-            logo.x = canvas.width;
-          }
-          if (logo.y > canvas.height) {
-            logo.y = -100;
-          } else if (logo.y < -100) {
-            logo.y = canvas.height;
-          }
-
-          break;
-        }
-      }
-
       ctx.drawImage(image, logo.x, logo.y, 35, 35);
 
       logo.x += logo.speedX;
       logo.y += logo.speedY;
 
       if (logo.x > canvas.width) {
-        logo.x = -100;
-      } else if (logo.x < -100) {
+        logo.x = -35;
+      } else if (logo.x < -35) {
         logo.x = canvas.width;
       }
+
       if (logo.y > canvas.height) {
-        logo.y = -100;
-      } else if (logo.y < -100) {
+        logo.y = -35;
+      } else if (logo.y < -35) {
         logo.y = canvas.height;
+      }
+
+      for (let j = 0; j < logos.length; j++) {
+        if (j !== index) {
+          if (
+            logo.x < logos[j].x + 35 &&
+            logo.x + 35 > logos[j].x &&
+            logo.y < logos[j].y + 35 &&
+            logo.y + 35 > logos[j].y
+          ) {
+            const dx = logo.x - logos[j].x;
+            const dy = logo.y - logos[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 35) {
+              const angle = Math.atan2(dy, dx);
+              const speed = 1;
+              logo.speedX = Math.cos(angle) * speed;
+              logo.speedY = Math.sin(angle) * speed;
+              logos[j].speedX = -Math.cos(angle) * speed;
+              logos[j].speedY = -Math.sin(angle) * speed;
+            }
+          }
+        }
       }
     });
 
     requestAnimationFrame(draw);
-  }
-
-  function isColliding(logo1, logo2) {
-    return (
-      logo1.x < logo2.x + 40 &&
-      logo1.x + 40 > logo2.x &&
-      logo1.y < logo2.y + 40 &&
-      logo1.y + 40 > logo2.y
-    );
   }
 
   draw();
@@ -230,12 +224,12 @@ document.addEventListener("DOMContentLoaded", () => {
     logos.forEach((logo) => {
       if (
         mouseX >= logo.x &&
-        mouseX <= logo.x + 40 &&
+        mouseX <= logo.x + 35 &&
         mouseY >= logo.y &&
-        mouseY <= logo.y + 40
+        mouseY <= logo.y + 35
       ) {
-        const targetX = Math.random() * (canvas.width - 40);
-        const targetY = Math.random() * (canvas.height - 40);
+        const targetX = Math.random() * (canvas.width - 35);
+        const targetY = Math.random() * (canvas.height - 35);
         smoothMove(logo, targetX, targetY);
       }
     });

@@ -30,8 +30,7 @@ const skillsData = [
   {
     icon: "/images/js.svg",
     name: "Javascript",
-    description:
-      "Strong understanding of ES6+ features and, DOM manipulation",
+    description: "Strong understanding of ES6+ features and, DOM manipulation",
     proficiency: "70",
   },
   {
@@ -44,8 +43,7 @@ const skillsData = [
   {
     icon: "/images/react.svg",
     name: "ReactJS",
-    description:
-      "Skilled in building dynamic user interfaces",
+    description: "Skilled in building dynamic user interfaces",
     proficiency: "70",
   },
   {
@@ -84,7 +82,7 @@ const portfolioData1 = [
     link: "https://github.com/WhatsWrongOB",
   },
   {
-    name: "Dashboard",
+    name: "Lms",
     image: "/images/project-2.png",
     link: "https://github.com/WhatsWrongOB",
   },
@@ -97,17 +95,17 @@ const portfolioData1 = [
 
 const portfolioData2 = [
   {
-    name: "Dashboard",
+    name: "Authentication",
     image: "/images/project-4.png",
     link: "https://github.com/WhatsWrongOB",
   },
   {
-    name: "Dashboard",
+    name: "Saas",
     image: "/images/project-5.png",
     link: "https://github.com/WhatsWrongOB",
   },
   {
-    name: "Travel Website",
+    name: "Memories",
     image: "/images/project-6.png",
     link: "https://github.com/WhatsWrongOB",
   },
@@ -115,17 +113,17 @@ const portfolioData2 = [
 
 const portfolioData3 = [
   {
-    name: "Dashboard",
+    name: "Web Projects",
     image: "/images/project-7.png",
     link: "https://github.com/WhatsWrongOB",
   },
   {
-    name: "Dashboard",
+    name: "Task Managment",
     image: "/images/project-8.jpg",
     link: "https://github.com/WhatsWrongOB",
   },
   {
-    name: "Travel Website",
+    name: "Uber clone",
     image: "/images/project-9.png",
     link: "https://github.com/WhatsWrongOB",
   },
@@ -177,7 +175,6 @@ const logos = [
   { src: "/images/mongo.svg", x: 400, y: 200, speedX: 0.7, speedY: -0.5 },
   { src: "/images/css.svg", x: 400, y: 200, speedX: 0.7, speedY: -0.5 },
   { src: "/images/node.svg", x: 400, y: 200, speedX: 0.7, speedY: -0.5 },
-
 ];
 
 export {
@@ -186,5 +183,5 @@ export {
   portfolioData2,
   portfolioData3,
   testimonailData,
-  logos
+  logos,
 };

@@ -10,7 +10,7 @@ const skillsData = [
     icon: "/images/css.svg",
     name: "Css",
     description:
-      "Skilled in responsive design, using Flexbox and CSS Grid, and creating animations",
+      "Skilled in responsive design, using Flexbox and creating animations",
     proficiency: "80",
   },
   {
@@ -31,7 +31,7 @@ const skillsData = [
     icon: "/images/js.svg",
     name: "Javascript",
     description:
-      "Strong understanding of ES6+ features, DOM manipulation, and event handling",
+      "Strong understanding of ES6+ features and, DOM manipulation",
     proficiency: "70",
   },
   {
@@ -45,35 +45,35 @@ const skillsData = [
     icon: "/images/react.svg",
     name: "ReactJS",
     description:
-      "Skilled in building dynamic user interfaces, managing state, and using hooks.",
+      "Skilled in building dynamic user interfaces",
     proficiency: "70",
   },
   {
     icon: "/images/node.svg",
     name: "NodeJS",
     description:
-      "Competent in building server-side applications and handling asynchronous operations.",
-    proficiency: "70",
+      "Competent in building server-side applications and handling async operations.",
+    proficiency: "60",
   },
   {
     icon: "/images/express.svg",
     name: "ExpressJS",
     description:
       "Proficient in setting up routing, middleware, and creating RESTful APIs",
-    proficiency: "70",
+    proficiency: "60",
   },
   {
     icon: "/images/mongo.svg",
     name: "MongoDB",
     description: "Experienced in using MongoDB for managing NoSQL databases,",
-    proficiency: "70",
+    proficiency: "55",
   },
   {
     icon: "/images/git.svg",
     name: "Version Control",
     description:
       "Knowledgeable in using Git and GitHub for version control and collaboration.",
-    proficiency: "70",
+    proficiency: "60",
   },
 ];
 

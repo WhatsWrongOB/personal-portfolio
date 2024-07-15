@@ -5,6 +5,7 @@ const skillsData = [
     description:
       "Proficient in writing semantic HTML and creating well-structured web pages",
     proficiency: "85",
+    detailedDescription:"Obaid was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
   },
   {
     icon: "/images/css.svg",
@@ -132,6 +133,7 @@ const portfolioData3 = [
 const testimonailData = [
   {
     name: "Imran Khan",
+    icon:"/images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -140,6 +142,7 @@ const testimonailData = [
   },
   {
     name: "Mohsin Khan",
+    icon:"/images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -148,6 +151,7 @@ const testimonailData = [
   },
   {
     name: "Shahrukh Khan",
+    icon:"/images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -156,6 +160,7 @@ const testimonailData = [
   },
   {
     name: "Salman Khan",
+    icon:"/images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:

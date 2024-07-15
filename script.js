@@ -18,13 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const portfolio_section_3 = document.getElementById("portfolio_section_3");
   const skills_section = document.getElementById("skills_section");
 
+  /*
+  Modal
+  */
   const setModalContent = (data) => {
     modal.innerHTML = `
       <div
         class="sidebar_animation flex flex-col md:flex-row justify-center items-center w-[95%] sm:w-[670px] h-auto md:h-[280px] section-border bg-[#202021] rounded-2xl relative md:static">
         <div class="w-full md:w-[25%] h-full flex md:justify-center items-start pl-4 pb-4 md:pl-0">
           <div class="mt-5 md:mt-10 section-border w-[60px] xl:w-[80px] h-[60px] xl:h-[80px] bg-[#383839] rounded-2xl">
-            <img src="./images/avatar-1.png" alt="avatar" />
+            <img src=${data.icon} alt="avatar" />
           </div>
         </div>
         <div class="w-full md:w-[75%] pr-5 pb-7 md:pb-0 md:relative pl-4 md:pl-0">
@@ -41,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  /*
+  Portfolio Card
+  */
   const createPortfolioHTML = (data) => `
     <div id="portfolio_card" class="w-[85%] xl:w-[270px] relative">
       <a href=${data.link} id="link"
@@ -56,25 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
 
-  skillsData.forEach((data) => {
-    skills_section.innerHTML += `
-    <div class="w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border">
-    <div class="w-[25%] flex justify-end pb-9 pr-5">
-      <img class="w-[40px]" src=${data.icon} alt=${data.name} />
-    </div>
-    <div class="w-[75%] pr-3 pb-1">
-      <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>
-      <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
-       ${data.description}
-      </p>
-      <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden">
-        <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
-      </div>
-    </div>
-  </div>
-    `;
-  });
-
   portfolioData1.forEach((data) => {
     portfolio_section_1.innerHTML += createPortfolioHTML(data);
   });
@@ -86,6 +73,34 @@ document.addEventListener("DOMContentLoaded", () => {
   portfolioData3.forEach((data) => {
     portfolio_section_3.innerHTML += createPortfolioHTML(data);
   });
+
+  /*
+  Skill Card
+  */
+
+  skillsData.forEach((data, index) => {
+    skills_section.innerHTML += `
+    <div id="skill_card_${index}" class="float-animation w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
+    <div class="w-[25%] flex justify-end pb-9 pr-5">
+      <img class="w-[40px]" src=${data.icon} alt=${data.name} />
+    </div>
+    <div class="w-[75%] pr-3 pb-1">
+      <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>
+      <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+        ${data.description}
+      </p>
+      <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden relative" data-tooltip="${data.proficiency}%">
+        <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
+      </div>
+    </div>
+  </div>
+  
+    `;
+  });
+
+  /*
+  Testimonial Card
+  */
 
   testimonailData.forEach((data, index) => {
     testimonial_section.innerHTML += `
@@ -127,6 +142,10 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("hidden");
     }
   });
+
+  /*
+  Data Page
+  */
 
   const pages = document.querySelectorAll("[data-page]");
   pages.forEach((page, index) => {

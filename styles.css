@@ -233,5 +233,21 @@ aside{
   backdrop-filter: blur(6px);
 }
 
+/* 
+Float Skilll Card Animation
+ */
+ 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
 
 /* bg-[#202021] */

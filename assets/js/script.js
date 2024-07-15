@@ -3,7 +3,7 @@ import {
   portfolioData1,
   testimonailData,
   logos,
-} from "../assets/index.js";
+} from "./index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebarMenu = document.getElementById("sidebar_menu");

@@ -1,11 +1,9 @@
 import {
   skillsData,
   portfolioData1,
-  portfolioData2,
-  portfolioData3,
   testimonailData,
   logos,
-} from "./assets/index.js";
+} from "../assets/index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebarMenu = document.getElementById("sidebar_menu");
@@ -13,9 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const close_modal = document.getElementById("close_modal");
   const modal = document.getElementById("modal");
   const testimonial_section = document.getElementById("testimonial_section");
-  const portfolio_section_1 = document.getElementById("portfolio_section_1");
-  const portfolio_section_2 = document.getElementById("portfolio_section_2");
-  const portfolio_section_3 = document.getElementById("portfolio_section_3");
+  const portfolio_section = document.getElementById("portfolio_section");
   const skills_section = document.getElementById("skills_section");
 
   /*
@@ -47,8 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
   /*
   Portfolio Card
   */
-  const createPortfolioHTML = (data) => `
-    <div id="portfolio_card" class="w-[85%] xl:w-[270px] relative">
+
+  portfolioData1.forEach((data) => {
+    portfolio_section.innerHTML += `
+    <div id="portfolio_card" class="max-w-[270px] relative mb-0 md:mb-5">
       <a href=${data.link} id="link"
         class="w-[45px] h-[45px] border rounded-xl flex justify-center items-center contact-bg section-border absolute top-[30%] left-[42%] z-10 cursor-pointer">
         <i class="fa-solid fa-eye text-[#f2de6f] text-xs"></i>
@@ -61,17 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </p>
     </div>
   `;
-
-  portfolioData1.forEach((data) => {
-    portfolio_section_1.innerHTML += createPortfolioHTML(data);
-  });
-
-  portfolioData2.forEach((data) => {
-    portfolio_section_2.innerHTML += createPortfolioHTML(data);
-  });
-
-  portfolioData3.forEach((data) => {
-    portfolio_section_3.innerHTML += createPortfolioHTML(data);
   });
 
   /*
@@ -115,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="w-full xl:w-[420px] h-[135px] flex justify-center items-center rounded-2xl relative">
           <div
             class="section-border w-[60px] xl:w-[80px] h-[60px] xl:h-[80px] bg-[#383839] rounded-2xl absolute top-[-30px] xl:top-[-40px] left-[30px]">
-            <img src="./images/avatar-1.png" alt="${data.name}" />
+            <img src=${data.icon} alt="${data.name}" />
           </div>
           <div class="w-[75%] text-center pt-4 pb-3">
             <h4 class="text-white text-[1.05rem] xl:text-[1.25rem] font-medium">

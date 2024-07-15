@@ -17,7 +17,7 @@ Welcome to my animated portfolio website! This project showcases my skills and p
 
 This section provides information about me, including what services i offer , experience, and passion for web development.
 
-## Services
+## Services :
 
 Here, I describe the services I offer, such as web development, UI/UX design, and consulting.
 

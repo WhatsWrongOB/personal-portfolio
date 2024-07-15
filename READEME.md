@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-Welcome to my portfolio website! This project showcases my skills and projects in web development. It's built using HTML, CSS, and JavaScript.
+Welcome to my animated portfolio website! This project showcases my skills and projects in web development. It's built using HTML, CSS, and JavaScript.
 
 ## Table of Contents
 

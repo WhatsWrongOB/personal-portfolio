@@ -89,9 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
         ${data.description}
       </p>
-      <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden relative" data-tooltip="${data.proficiency}%">
-        <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
-      </div>
+     <div class="relative">
+     <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden">
+     <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
+     </div>
+    <div class="tooltip bg-white text-black font-semibold text-xs rounded py-1 px-2 absolute top-3 right-[50px] z-10">
+        ${data.proficiency}%
+     </div>
+     </div>
     </div>
   </div>
   

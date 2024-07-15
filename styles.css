@@ -4,7 +4,6 @@
   #s tyle.css
 \*-----------------------------------*/
 
-
 body {
   font-family: "Poppins", "Gill Sans", "Gill Sans MT";
   background-color: #202021;
@@ -229,16 +228,17 @@ body::-webkit-scrollbar-button {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-aside{
+aside {
   backdrop-filter: blur(6px);
 }
 
 /* 
 Float Skilll Card Animation
  */
- 
+
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -248,6 +248,15 @@ Float Skilll Card Animation
 
 .float-animation {
   animation: float 3s ease-in-out infinite;
+}
+
+.tooltip {
+  opacity: 0;
+  transition: all ease-in-out 0.1s;
+}
+
+.relative:hover .tooltip {
+  opacity: 1;
 }
 
 /* bg-[#202021] */

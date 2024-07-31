@@ -35,13 +35,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const setProjectModalContent = (data) => {
+    modal.innerHTML = `
+    <div
+    class="sidebar_animation flex flex-col md:flex-row justify-center items-center w-[95%] sm:w-[670px] h-auto md:h-[280px] section-border bg-[#202021] rounded-2xl relative md:static">
+    <div class="w-full md:w-[25%] h-full flex md:justify-center items-start pl-4 pb-4 md:pl-0">
+      <div class="mt-5 md:mt-10 section-border w-[60px] xl:w-[80px] h-[60px] xl:h-[80px] overflow-hidden rounded-2xl">
+        <img class="w-full h-full" src=${data.image} alt=${data.name} />
+      </div>
+    </div>
+    <div class="w-full md:w-[75%] pr-5 pb-7 md:pb-0 md:relative pl-4 md:pl-0">
+      <i id="close_modal"
+        class="cursor-pointer fa-solid fa-close text-white absolute right-7 top-3 md:top-[-5px]"></i>
+      <div>
+        <h3 class="text-[1.05rem] font-semibold">${data.name}
+        </h3>
+        <p class="py-1 text-[0.9rem]"><strong>Tech:</strong> ${data.tech}</p>
+        <p class="text-[0.9rem]"><strong>Description:</strong> ${data.description}</p>
+          <div class="mt-1 flex items-center gap-2">
+            <a class="text-[#f5e37f] hover:underline text-xs" href=${data.link}>Github Link</a> |
+            <a class="text-[#f5e37f] hover:underline text-xs" href=${data.link}>Live Link</a>
+          </div>
+      </div>
+    </div>
+  </div>
+    `;
+
+    document.getElementById("close_modal").addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+  };
+
   /*
   Portfolio Card
   */
 
-  portfolioData1.forEach((data) => {
+  portfolioData1.forEach((data, index) => {
     portfolio_section.innerHTML += `
-    <div id="portfolio_card" class="max-w-[270px] relative mb-0 md:mb-5">
+    <div id="portfolio_card_${index}" class="max-w-[270px] relative mb-0 md:mb-5">
       <a href=${data.link} id="link"
         class="w-[45px] h-[45px] border rounded-xl flex justify-center items-center contact-bg section-border absolute top-[30%] left-[42%] z-10 cursor-pointer">
         <i class="fa-solid fa-eye text-[#f2de6f] text-xs"></i>
@@ -130,6 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  portfolio_section.addEventListener("click", (event) => {
+    const card = event.target.closest("[id^='portfolio_card_']");
+    if (card) {
+      const index = card.id.split("_")[2];
+      setProjectModalContent(portfolioData1[index]);
+      modal.classList.add("flex");
+      modal.classList.remove("hidden");
+    }
+  });
+
   /*
   Data Page
   */
@@ -158,113 +199,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  /*
-  Canvas backgound animation
-  */
-  const canvas = document.getElementById("myCanvas");
-  const ctx = canvas.getContext("2d");
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    logos.forEach((logo, index) => {
-      const image = new Image();
-      image.src = logo.src;
-      ctx.drawImage(image, logo.x, logo.y, 35, 35);
-
-      logo.x += logo.speedX;
-      logo.y += logo.speedY;
-
-      if (logo.x > canvas.width) {
-        logo.x = -35;
-      } else if (logo.x < -35) {
-        logo.x = canvas.width;
-      }
-
-      if (logo.y > canvas.height) {
-        logo.y = -35;
-      } else if (logo.y < -35) {
-        logo.y = canvas.height;
-      }
-
-      for (let j = 0; j < logos.length; j++) {
-        if (j !== index) {
-          if (
-            logo.x < logos[j].x + 35 &&
-            logo.x + 35 > logos[j].x &&
-            logo.y < logos[j].y + 35 &&
-            logo.y + 35 > logos[j].y
-          ) {
-            const dx = logo.x - logos[j].x;
-            const dy = logo.y - logos[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 35) {
-              const angle = Math.atan2(dy, dx);
-              const speed = 1;
-              logo.speedX = Math.cos(angle) * speed;
-              logo.speedY = Math.sin(angle) * speed;
-              logos[j].speedX = -Math.cos(angle) * speed;
-              logos[j].speedY = -Math.sin(angle) * speed;
-            }
-          }
-        }
-      }
-    });
-
-    requestAnimationFrame(draw);
-  }
-
-  draw();
-
-  canvas.addEventListener("mousemove", handleMouseMove);
-
-  function handleMouseMove(event) {
-    const mouseX = event.clientX - canvas.getBoundingClientRect().left;
-    const mouseY = event.clientY - canvas.getBoundingClientRect().top;
-
-    logos.forEach((logo) => {
-      if (
-        mouseX >= logo.x &&
-        mouseX <= logo.x + 35 &&
-        mouseY >= logo.y &&
-        mouseY <= logo.y + 35
-      ) {
-        const targetX = Math.random() * (canvas.width - 35);
-        const targetY = Math.random() * (canvas.height - 35);
-        smoothMove(logo, targetX, targetY);
-      }
-    });
-  }
-
-  function smoothMove(logo, targetX, targetY) {
-    const duration = 500;
-    const start = performance.now();
-    const startX = logo.x;
-    const startY = logo.y;
-
-    function move(currentTime) {
-      const elapsed = currentTime - start;
-      const progress = elapsed / duration;
-
-      if (progress >= 1) {
-        logo.x = targetX;
-        logo.y = targetY;
-      } else {
-        logo.x = startX + (targetX - startX) * ease(progress);
-        logo.y = startY + (targetY - startY) * ease(progress);
-        requestAnimationFrame(move);
-      }
-    }
-
-    requestAnimationFrame(move);
-  }
-
-  function ease(t) {
-    return t;
-  }
 });

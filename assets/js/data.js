@@ -1,6 +1,6 @@
 const skillsData = [
   {
-    icon: "./assets/images/html.svg",
+    icon: "./images/html.svg",
     name: "Html",
     description:
       "Proficient in writing semantic HTML and creating well-structured web pages",
@@ -9,67 +9,67 @@ const skillsData = [
       "Obaid was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
   },
   {
-    icon: "./assets/images/css.svg",
+    icon: "./images/css.svg",
     name: "Css",
     description:
       "Skilled in responsive design, using Flexbox and creating animations",
     proficiency: "80",
   },
   {
-    icon: "./assets/images/sass.svg",
+    icon: "./images/sass.svg",
     name: "Sass",
     description:
       "Experienced in using SASS for writing maintainable and reusable styles",
     proficiency: "70",
   },
   {
-    icon: "./assets/images/tailwind.svg",
+    icon: "./images/tailwind.svg",
     name: "Tailwind css",
     description:
       "Proficient in using Tailwind CSS for rapid UI development, creating utility-first style",
     proficiency: "70",
   },
   {
-    icon: "./assets/images/js.svg",
+    icon: "./images/js.svg",
     name: "Javascript",
     description: "Strong understanding of ES6+ features and, DOM manipulation",
     proficiency: "70",
   },
   {
-    icon: "./assets/images/ts.svg",
+    icon: "./images/ts.svg",
     name: "TypeScript",
     description:
       "Strong proficiency in using TypeScript for static typing, enhancing code quality",
     proficiency: "70",
   },
   {
-    icon: "./assets/images/react.svg",
+    icon: "./images/react.svg",
     name: "ReactJS",
     description: "Skilled in building dynamic user interfaces",
     proficiency: "70",
   },
   {
-    icon: "./assets/images/node.svg",
+    icon: "./images/node.svg",
     name: "NodeJS",
     description:
       "Competent in building server-side applications and handling async operations.",
     proficiency: "60",
   },
   {
-    icon: "./assets/images/express.svg",
+    icon: "./images/express.svg",
     name: "ExpressJS",
     description:
       "Proficient in setting up routing, middleware, and creating RESTful APIs",
     proficiency: "60",
   },
   {
-    icon: "./assets/images/mongo.svg",
+    icon: "./images/mongo.svg",
     name: "MongoDB",
     description: "Experienced in using MongoDB for managing NoSQL databases,",
     proficiency: "55",
   },
   {
-    icon: "./assets/images/git.svg",
+    icon: "./images/git.svg",
     name: "Version Control",
     description:
       "Knowledgeable in using Git and GitHub for version control and collaboration.",
@@ -80,7 +80,7 @@ const skillsData = [
 const portfolioData1 = [
   {
     name: "Ecommerce",
-    image: "./assets/images/project-1.jpg",
+    image: "./images/project-1.jpg",
     link: "https://github.com/WhatsWrongOB/Mern_Ecommerce",
     description:
       " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -88,7 +88,7 @@ const portfolioData1 = [
   },
   {
     name: "Lms",
-    image: "./assets/images/project-2.png",
+    image: "./images/project-2.png",
     link: "https://github.com/WhatsWrongOB/Lms",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -96,7 +96,7 @@ const portfolioData1 = [
   },
   {
     name: "Travel Website",
-    image: "./assets/images/project-3.jpg",
+    image: "./images/project-3.jpg",
     link: "https://github.com/WhatsWrongOB/travel-ui-ux",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -104,7 +104,7 @@ const portfolioData1 = [
   },
   {
     name: "Authentication",
-    image: "./assets/images/project-4.png",
+    image: "./images/project-4.png",
     link: "https://github.com/WhatsWrongOB/Mern_Auth",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -112,7 +112,7 @@ const portfolioData1 = [
   },
   {
     name: "Weather App",
-    image: "./assets/images/project-5.png",
+    image: "./images/project-5.png",
     link: "https://github.com/WhatsWrongOB/Weather-app",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -120,7 +120,7 @@ const portfolioData1 = [
   },
   {
     name: "Memories",
-    image: "./assets/images/project-6.png",
+    image: "./images/project-6.png",
     link: "https://github.com/WhatsWrongOB/Mern_Memories",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -128,7 +128,7 @@ const portfolioData1 = [
   },
   {
     name: "Web Projects",
-    image: "./assets/images/project-7.png",
+    image: "./images/project-7.png",
     link: "https://github.com/WhatsWrongOB/Web_Projects",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -136,7 +136,7 @@ const portfolioData1 = [
   },
   {
     name: "Lms",
-    image: "./assets/images/project-8.jpg",
+    image: "./images/project-8.jpg",
     link: "https://github.com/WhatsWrongOB/Lms_server",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -144,7 +144,7 @@ const portfolioData1 = [
   },
   {
     name: "Portfolio Website",
-    image: "./assets/images/project-9.png",
+    image: "./images/project-9.png",
     link: "https://github.com/WhatsWrongOB/Competition_Portfolio",
     description:
     " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
@@ -155,7 +155,7 @@ const portfolioData1 = [
 const testimonailData = [
   {
     name: "Sohaib",
-    icon: "./assets/images/avatar-1.png",
+    icon: "./images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -164,7 +164,7 @@ const testimonailData = [
   },
   {
     name: "Noman",
-    icon: "./assets/images/avatar-1.png",
+    icon: "./images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -173,7 +173,7 @@ const testimonailData = [
   },
   {
     name: "Jamal",
-    icon: "./assets/images/avatar-1.png",
+    icon: "./images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -182,7 +182,7 @@ const testimonailData = [
   },
   {
     name: "Mujtaba",
-    icon: "./assets/images/avatar-1.png",
+    icon: "./images/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:

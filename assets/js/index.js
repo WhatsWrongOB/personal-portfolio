@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     skills_section.innerHTML += `
     <div id="skill_card_${index}" class="float-animation w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
     <div class="w-[25%] flex justify-end pb-9 pr-5">
-      <img class="w-[40px]" src=${data.icon} alt=${data.name} />
+      <img loading="lazy" class="w-[40px]" src=${data.icon} alt=${data.name} />
     </div>
     <div class="w-[75%] pr-3 pb-1">
       <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>

@@ -1,4 +1,4 @@
-import { skillsData, portfolioData1, testimonailData, logos } from "./data.js";
+import { skillsData, portfolioData1, testimonailData } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebarMenu = document.getElementById("sidebar_menu");

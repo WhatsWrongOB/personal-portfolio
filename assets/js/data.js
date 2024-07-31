@@ -191,53 +191,5 @@ const testimonailData = [
   },
 ];
 
-const logos = [
-  { src: "./assets/images/git.svg", x: 400, y: 200, speedX: 0.7, speedY: -0.5 },
-  { src: "./assets/images/html.svg", x: 0, y: 0, speedX: 0.5, speedY: -0.3 },
-  {
-    src: "./assets/images/tailwind.svg",
-    x: 100,
-    y: 50,
-    speedX: -0.7,
-    speedY: 0.4,
-  },
-  {
-    src: "./assets/images/react.svg",
-    x: 200,
-    y: 100,
-    speedX: 0.8,
-    speedY: -0.6,
-  },
-  {
-    src: "./assets/images/sass.svg",
-    x: 300,
-    y: 150,
-    speedX: -0.6,
-    speedY: 0.7,
-  },
-  { src: "./assets/images/ts.svg", x: 400, y: 200, speedX: 0.7, speedY: -0.5 },
-  {
-    src: "./assets/images/express.svg",
-    x: 400,
-    y: 200,
-    speedX: 0.7,
-    speedY: -0.5,
-  },
-  {
-    src: "./assets/images/mongo.svg",
-    x: 400,
-    y: 200,
-    speedX: 0.7,
-    speedY: -0.5,
-  },
-  { src: "./assets/images/css.svg", x: 400, y: 200, speedX: 0.7, speedY: -0.5 },
-  {
-    src: "./assets/images/node.svg",
-    x: 400,
-    y: 200,
-    speedX: 0.7,
-    speedY: -0.5,
-  },
-];
 
-export { skillsData, portfolioData1, testimonailData, logos };
+export { skillsData, portfolioData1, testimonailData };

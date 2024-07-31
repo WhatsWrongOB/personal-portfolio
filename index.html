@@ -35,8 +35,6 @@
 
 <body class="w-screen h-auto">
 
-  <canvas id="myCanvas" class="fixed top-0 left-0 z-0"></canvas>
-  
   <!-- 
     Modal
    -->
@@ -70,7 +68,7 @@
        -->
 
     <aside
-      class="w-[94%] md:w-[75%] xl:w-[22%] h-auto xl:h-[130vh] section-border backdrop-blur rounded-2xl xl:sticky xl:top-[50px]">
+      class="w-[94%] md:w-[75%] xl:w-[22%] h-auto xl:h-[130vh] section-border backdrop-blur rounded-2xl xl:sticky xl:top-[50px] bg-[#1E1E1F]">
       <div
         class="relative xl:static h-auto xl:h-[350px] flex xl:flex-col xl:justify-center items-center gap-4 pt-5 pb-6 xl:pb-0 pl-5 xl:pl-0">
         <button class="absolute xl:static text-sm text-[#f3da4e] font-semibold right-[15px] top-[7px] xl:hidden"
@@ -176,38 +174,44 @@
            Main
        -->
     <section
-      class="about w-[94%] md:w-[75%] xl:w-[67%] h-[auto] section-border rounded-2xl static xl:relative overflow-hidden mb-7 xl:mb-0">
+      class="about w-[94%] md:w-[75%] xl:w-[67%] h-[auto] section-border rounded-2xl static xl:relative overflow-hidden mb-7 xl:mb-0 bg-[#1E1E1F]">
       <!-- 
             Menu
         -->
       <nav
-        class="w-full xl:w-[440px] h-[60px] section-border bg-[#282829] rounded-2xl fixed bottom-0 right-0 xl:absolute xl:right-[-10px] xl:top-[-5px] xl:block z-40 flex justify-center items-center">
+        class="w-full xl:w-[450px] h-[60px] section-border bg-[#282829] rounded-2xl fixed bottom-0 right-0 xl:absolute xl:right-[-10px] xl:top-[-5px] xl:block z-40 flex justify-center items-center md:px-3">
         <ul
-          class="w-full h-full flex gap-6 xl:gap-7 justify-center xl:justify-around items-center pl-6 xl:pl-4 pr-5 pt-5 pb-6">
+          class="w-full h-full flex gap-4 xl:gap-7 justify-center xl:justify-around items-center pl-6 xl:pl-4 pr-5 pt-5 pb-6">
           <button data-nav-link="about">
-            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+            <li class="text-gray-200 text-[0.8rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567]">
               About
             </li>
           </button>
+          <button data-nav-link="resume">
+            <li class="text-gray-200 text-[0.8rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567]">
+              Resume
+            </li>
+          </button>
           <button data-nav-link="skills">
-            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+            <li class="text-gray-200 text-[0.8rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567]">
               Skills
             </li>
           </button>
 
           <button data-nav-link="portfolio">
-            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+            <li class="text-gray-200 text-[0.8rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567]">
               Portfolio
             </li>
           </button>
 
           <button data-nav-link="contact">
-            <li class="text-gray-200 text-[0.85rem] xl:text-[0.95rem] font-semibold hover:text-[#E5C567]">
+            <li class="text-gray-200 text-[0.8rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567]">
               Contact
             </li>
           </button>
         </ul>
       </nav>
+
 
       <!-- 
           About
@@ -232,26 +236,17 @@
             not coding, you might find me exploring nature or diving into a
             new book.
           </p>
-
-
-
-          <a class="mt-6 w-[200px]" href="./images/obaid-resume.pdf" target="_blank">
-            <button class="btn-79 text-[0.8rem]">
-              <span>Download Cv</span>
-            </button>
-          </a>
-
         </div>
 
         <!-- 
            Services
           -->
 
-        <div class="xl:pl-8 pt-5">
-          <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0">
+        <div class="xl:pl-8 px-1 md:px-0 pt-5">
+          <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0 md:mt-2">
             What I'm Doing
           </h1>
-          <div class="mt-8 flex items-center flex-col xl:flex-row gap-5 g-[#212123]">
+          <div class="mt-8 flex items-center flex-col xl:flex-row gap-5 text-[#212123]">
             <div class="w-[98%] xl:w-[420px] h-[140px] flex justify-center items-center rounded-2xl skill-border">
               <div class="w-[25%] flex justify-end pb-9 pr-5">
                 <img class="w-1/2 md:w-[30%]" src="./assets/images/icon-dev.svg" alt="name" />
@@ -318,7 +313,7 @@
               Testimonials
              -->
 
-          <div class="pl-1 xl:pl-3 pt-10 pb-10">
+          <div class="px-1 xl:pl-3 pt-10 pb-10">
             <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0">
               Testimonials
             </h1>
@@ -330,6 +325,94 @@
 
             </div>
           </div>
+        </div>
+      </article>
+
+
+      <!-- 
+        Resume
+       -->
+
+      <article data-page="resume" id="resume" class="sidebar_animation backdrop-blur">
+        <div class="max-w-4xl mx-auto px-4 md:p-8 shadow-lg mt-6 md:mt-10">
+          <header class="mb-8">
+            <h1 class="text-xl md:text-4xl font-bold ">Obaid Ali Siddiqui</h1>
+            <p class="text-lg text-white py-1">obaidbro9@gmail.com</p>
+            <p class="text-lg">
+              <a target="_blank" href="https://www.linkedin.com/in/obaid-ali-559a6b288/"
+                class="text-[#E5C567] font-semibold">LinkedIn
+                Profile</a> |
+              <a target="_blank" href="https://github.com/WhatsWrongOB/" class="text-[#E5C567] font-semibold">GitHub
+                Profile</a>
+            </p>
+          </header>
+
+          <section class="mb-8">
+            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Objective</h2>
+            <p>Aspiring MERN Stack Developer with a Bachelor’s in Information Technology from Punjab University.
+              Proficient in building scalable web applications with a strong foundation in front-end and back-end
+              technologies. Seeking to leverage my skills in HTML, CSS, JavaScript, React, TypeScript, Redux, Node.js,
+              Express, and MongoDB to contribute to innovative projects and grow as a software developer.</p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Education</h2>
+            <p><strong>Bachelor of Science in Information Technology</strong></p>
+            <p>Punjab University, 2025</p>
+            <p>Relevant coursework: Web Development, Database Management, Software Engineering, Data Structures</p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Projects</h2>
+
+            <div class="mb-4">
+              <h3 class="text-[1.03rem] font-semibold">Learning Management System</h3>
+              <p><strong>Technologies:</strong> React, Node.js, Express, MongoDB</p>
+              <p><strong>Description:</strong> Developed a full-stack LMS allowing users to enroll in courses, take
+                quizzes, and track progress. Implemented authentication, course management, and real-time
+                notifications.</p>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-[1.03rem] font-semibold">E-commerce Website</h3>
+              <p><strong>Technologies:</strong> React, Redux, Node.js, Express, MongoDB</p>
+              <p><strong>Description:</strong> Created a responsive e-commerce platform with product listings, a
+                shopping cart, and payment integration. Used Redux for state management and implemented RESTful APIs
+                for backend functionality.</p>
+            </div>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Skills</h2>
+            <ul class="list-disc ml-5">
+              <li><strong>Frontend Development:</strong> HTML, CSS, JavaScript, React, TypeScript</li>
+              <li><strong>State Management:</strong> Redux</li>
+              <li><strong>Backend Development:</strong> Node.js, Express, MongoDB</li>
+              <li><strong>Tools & Technologies:</strong> Vscode Git, GitHub, Npm, Docker</li>
+              <li><strong>Soft Skills:</strong> Communication, Problem-Solving, Team Collaboration, Time Management
+              </li>
+            </ul>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Projects on GitHub</h2>
+            <ul class="list-disc ml-5">
+              <li><a target="_blank" href="https://github.com/WhatsWrongOB/Lms" class="text-[#E5C567] font-semibold">LMS
+                  Project</a>
+              </li>
+              <li><a target="_blank" href="https://github.com/WhatsWrongOB/Mern_Ecommerce"
+                  class="text-[#E5C567] font-semibold">E-commerce
+                  Website</a></li>
+            </ul>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Additional Information</h2>
+            <ul class="list-disc ml-5">
+              <li><strong>Languages:</strong> English, Urdu</li>
+              <li><strong>Hobbies:</strong> Coding Challenges, Reading Tech Blogs</li>
+            </ul>
+          </section>
         </div>
       </article>
 

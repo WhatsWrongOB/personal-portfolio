@@ -17,18 +17,6 @@ gulp.task('minify-js', () => {
     .pipe(gulp.dest('dist/js'));
 });
 
-// Minify HTML
-gulp.task('minify-html', () => {
-  return gulp.src('./*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'));
-});
-
-// Copy Images
-gulp.task('copy-images', () => {
-  return gulp.src('assets/images/**/*')
-    .pipe(gulp.dest('dist/images'));
-});
 
 // Default Task
-gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'minify-html', 'copy-images'));
+gulp.task('default', gulp.parallel('minify-css', 'minify-js'));

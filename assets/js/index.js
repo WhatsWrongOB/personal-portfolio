@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         class="w-[45px] h-[45px] border rounded-xl flex justify-center items-center contact-bg section-border absolute top-[30%] left-[42%] z-10 cursor-pointer">
         <i class="fa-solid fa-eye text-[#f2de6f] text-xs"></i>
       </a>
-      <img class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500"
+      <img loading="lazy" class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500"
         src=${data.image} alt=${data.name} />
       <p class="text-white pl-2 pt-4">${data.name}</p>
       <p class="text-gray-300 text-sm pl-2 pt-1 font-semibold">

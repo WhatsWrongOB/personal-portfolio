@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <i id="close_modal"
         class="cursor-pointer fa-solid fa-close text-white absolute right-7 top-3 md:top-[-5px]"></i>
       <div>
-        <h3 class="text-[1.05rem] font-semibold">${data.name}
+        <h3 class="text-[1.1rem] md:text-[1.2rem] font-semibold">${data.name}
         </h3>
         <p class="py-1 text-[0.9rem]"><strong>Tech:</strong> ${data.tech}</p>
         <p class="text-[0.9rem]"><strong>Description:</strong> ${data.description}</p>

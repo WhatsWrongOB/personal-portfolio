@@ -72,12 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   portfolioData1.forEach((data, index) => {
     portfolio_section.innerHTML += `
-    <div id="portfolio_card_${index}" class="max-w-[270px] relative mb-0 md:mb-5">
-      <a href=${data.link} id="link"
-        class="w-[45px] h-[45px] border rounded-xl flex justify-center items-center contact-bg section-border absolute top-[30%] left-[42%] z-10 cursor-pointer">
-        <i class="fa-solid fa-eye text-[#f2de6f] text-xs"></i>
-      </a>
-      <img loading="lazy" class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500"
+    <div id="portfolio_card_${index}" class="max-w-[270px] h-[280px] relative mb-0 md:mb-5">
+      <img loading="lazy" class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500 cursor-pointer"
         src=${data.image} alt=${data.name} />
       <p class="text-white pl-2 pt-4">${data.name}</p>
       <p class="text-gray-300 text-sm pl-2 pt-1 font-semibold">

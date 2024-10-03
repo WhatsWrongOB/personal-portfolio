@@ -200,8 +200,12 @@ document.addEventListener("DOMContentLoaded", () => {
 Form Submit
 */
 
+const button = document.getElementById("button")
+
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
+
+  button.disabled = true;
 
   const username = document.getElementById("username").value;
   const email = document.getElementById("email").value;
@@ -224,10 +228,11 @@ document.getElementById("form").addEventListener("submit", (e) => {
     .then((data) => {
       alert(data.message);
       document.getElementById("form").reset();
+      button.disabled = false;
     })
     .catch((error) => {
       alert("Message not sent");
-      console.error("Error:", error);
+      button.disabled = false;
     });
 });
 

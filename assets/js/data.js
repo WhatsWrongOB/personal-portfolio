@@ -79,76 +79,85 @@ const skillsData = [
 
 const portfolioData1 = [
   {
-    name: "Ecommerce",
-    image: "./assets/images/project-1.jpg",
-    link: "https://github.com/WhatsWrongOB/Mern_Ecommerce",
+    name: "Express App generator",
+    image: "./assets/images/project-9.png",
+    link: "https://github.com/WhatsWrongOB/express-app-generator",
     description:
-      " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-      tech:"React, Node.js, Express, MongoDB"
+      "npx create-ob-app 🚀 allows you to quickly scaffold a new Express.js application with customizable options. Whether you are starting a new project or want to save time on boilerplate code,",
+    tech: "Javascript, Node.js",
+    type: "CLI",
   },
   {
-    name: "Lms",
-    image: "./assets/images/project-2.png",
-    link: "https://github.com/WhatsWrongOB/Lms",
+    name: "Ecommerce",
+    image: "./assets/images/project-1.jpg",
+    link: "https://github.com/WhatsWrongOB/mern-ecommerce",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      "Developed a full-featured e-commerce platform leveraging the MERN stack, product browsing, purchasing, and order management",
+    tech: "React, Node.js, Express, MongoDB",
+    type: "Web Development",
+  },
+  {
+    name: "Lms Backend",
+    image: "./assets/images/project-2.png",
+    link: "https://github.com/WhatsWrongOB/lms-server-typescript",
+    description:
+      " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
+    tech: "Node.js, Express, MongoDB",
+    type: "Web Development",
   },
   {
     name: "Travel Website",
     image: "./assets/images/project-3.jpg",
-    link: "https://github.com/WhatsWrongOB/travel-ui-ux",
+    link: "https://github.com/WhatsWrongOB/travel-ui-html",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      "A travel website designed using HTML and CSS, showcasing a modern and visually appealing layout.",
+    tech: "Html, Css",
+    type: "Web Development",
   },
   {
     name: "Authentication",
     image: "./assets/images/project-4.png",
-    link: "https://github.com/WhatsWrongOB/Mern_Auth",
+    link: "https://github.com/WhatsWrongOB/mern-authentication",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      "The application allows users to register, log in, and manage their sessions securely. It features JSON Web Token (JWT) authentication for protecting routes and ensuring secure access to protected resources.",
+    tech: "React, Node.js, Express, MongoDB",
+    type: "Web Development",
   },
   {
-    name: "Weather App",
+    name: "Shopery",
     image: "./assets/images/project-5.png",
     link: "https://github.com/WhatsWrongOB/Weather-app",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      "This project is an e-commerce website built with Next.js, featuring dynamic product listings fetched from an external API. Users can filter products by category, price, and rating, and navigate through paginated results",
+    tech: "Javascript, NextJs",
+    type: "Web Development",
   },
   {
     name: "Memories",
     image: "./assets/images/project-6.png",
-    link: "https://github.com/WhatsWrongOB/Mern_Memories",
+    link: "https://github.com/WhatsWrongOB/mern-memories",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      "Create and manage personal memories with date tracking on our MERN stack application, where users can post and delete their entries.",
+    tech: "React, Node.js, Express, MongoDB",
+    type: "Web Development",
   },
   {
-    name: "Web Projects",
+    name: "Learnify",
     image: "./assets/images/project-7.png",
     link: "https://github.com/WhatsWrongOB/Web_Projects",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      "A user-friendly website offering a diverse collection of beginner-friendly projects with an intuitive admin panel",
+    tech: "React, Node.js, Express, MongoDB",
+    type: "Web Development",
   },
   {
-    name: "Lms",
+    name: "Lms Frontend",
     image: "./assets/images/project-8.jpg",
-    link: "https://github.com/WhatsWrongOB/Lms_server",
+    link: "https://github.com/WhatsWrongOB/lms-client-typescript",
     description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
-  },
-  {
-    name: "Portfolio Website",
-    image: "./assets/images/project-9.png",
-    link: "https://github.com/WhatsWrongOB/Competition_Portfolio",
-    description:
-    " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
-    tech:"React, Node.js, Express, MongoDB"
+      " Developed a full-stack LMS allowing users to enroll incourses, take quizzes, and track progress. Implemented authentication, course management, and real-time notifications.",
+    tech: "Javascript, React",
+    type: "Web Development",
   },
 ];
 
@@ -190,6 +199,5 @@ const testimonailData = [
     date: "14 June, 2024",
   },
 ];
-
 
 export { skillsData, portfolioData1, testimonailData };

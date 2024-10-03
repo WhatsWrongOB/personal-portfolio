@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 
       For seo purposes
-     -->
+    -->
   <meta name="keywords" content="Obaid Portfolio" />
   <meta name="description"
     content="I'm an experienced Full-Stack Developer skilled in HTML, CSS, JavaScript, and the MERN Stack (MongoDB, Express, React, Node.js). I specialize in building responsive, high-performance web applications and websites, delivering seamless front-end and back-end solutions." />
@@ -221,7 +221,7 @@
         <!-- 
            Services
           -->
-        <div class="xl:pl-8 px-1 md:px-0 pt-5">
+        <div class="xl:pl-6 px-1 md:px-0 pt-5">
           <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0 md:mt-2">
             What I'm Doing
           </h1>
@@ -288,7 +288,7 @@
           <!-- 
               Testimonials
              -->
-          <div class="px-1 xl:pl-3 pt-10 pb-10">
+          <div class="px-1 xl:pl-2 pt-10 pb-10">
             <h1 class="text-[1.25rem] xl:text-[1.5rem] font-bold text-white pl-4 xl:pl-0">
               Testimonials
             </h1>
@@ -320,7 +320,7 @@
             </h2>
             <p>
               Aspiring MERN Stack Developer with a Bachelor’s in Information
-              Technology from Punjab University. Proficient in building
+              Technology from Islamia College affiliated with Punjab University. Proficient in building
               scalable web applications with a strong foundation in front-end
               and back-end technologies. Seeking to leverage my skills in
               HTML, CSS, JavaScript, React, TypeScript, Redux, Node.js,
@@ -405,11 +405,12 @@
             </h2>
             <ul class="list-disc ml-5">
               <li>
-                <a target="_blank" href="https://github.com/WhatsWrongOB/Lms" class="text-[#E5C567] font-semibold">LMS
+                <a target="_blank" href="https://github.com/WhatsWrongOB/lms-server-typescript"
+                  class="text-[#E5C567] font-semibold">LMS
                   Project</a>
               </li>
               <li>
-                <a target="_blank" href="https://github.com/WhatsWrongOB/Mern_Ecommerce"
+                <a target="_blank" href="https://github.com/WhatsWrongOB/mern-ecommerce"
                   class="text-[#E5C567] font-semibold">E-commerce Website</a>
               </li>
             </ul>
@@ -454,8 +455,9 @@
           </h1>
           <div class="w-[50px] style-border mt-2 rounded-2xl"></div>
         </div>
-        <div class="pl-2 xl:pl-6 pt-2">
-          <div id="skills_section" class="mt-8 flex items-center flex-wrap gap-5 g-[#212123] pb-7">
+        <div class="flex justify-center items-center pt-2">
+          <div id="skills_section"
+            class="w-full mt-8 flex justify-center items-center flex-wrap gap-5 g-[#212123] pb-7 px-5 sm:px-0">
             <!-- 
                Skills Card here dynamically with Javascript
              -->
@@ -486,25 +488,25 @@
             <!-- 
                Contact Form 
              -->
-            <form>
-              <div class="flex flex-col xl:flex-row justify-around gap-3 mb-4">
-                <input
-                  class="bg-transparent section-border text-white inline-block w-full xl:w-[48%] p-3 text-sm rounded-2xl"
-                  type="text" placeholder="Username" />
-                <input
-                  class="bg-transparent section-border text-white inline-block w-full xl:w-[48%] p-3 text-sm rounded-2xl"
-                  type="email" placeholder="Email" />
-              </div>
-              <textarea
-                class="h-60 bg-transparent section-border text-white inline-block w-full pt-4 pl-5 text-sm rounded-2xl"
-                placeholder="Message"></textarea>
-              <div class="w-full flex justify-center xl:justify-end items-center mt-3">
-                <button class="text-white w-[97%] xl:w-[200px] section-border py-3 bg-[#fbc05a] text-base rounded-xl">
-                  Send
-                </button>
-              </div>
-            </form>
+            <form id="form"">
+              <div class=" flex flex-col xl:flex-row justify-around gap-3 mb-4">
+              <input id="username"
+                class="bg-transparent section-border text-white inline-block w-full xl:w-[48%] p-3 text-sm rounded-2xl"
+                type="text" placeholder="Username" required />
+              <input id="email"
+                class="bg-transparent section-border text-white inline-block w-full xl:w-[48%] p-3 text-sm rounded-2xl"
+                type="email" placeholder="Email" required />
           </div>
+          <textarea id="message"
+            class="h-60 bg-transparent section-border text-white inline-block w-full pt-4 pl-5 text-sm rounded-2xl"
+            placeholder="Message" required></textarea>
+          <div class="w-full flex justify-center xl:justify-end items-center mt-3">
+            <button class="text-white w-[97%] xl:w-[200px] section-border py-3 bg-[#fbc05a] text-base rounded-xl">
+              Send
+            </button>
+          </div>
+          </form>
+        </div>
         </div>
       </article>
     </section>

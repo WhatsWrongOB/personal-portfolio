@@ -53,8 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="py-1 text-[0.95rem]"><strong>Tech:</strong> ${data.tech}</p>
         <p class="text-[0.95rem] md:text-base"><strong>Description:</strong> ${data.description}</p>
           <div class="mt-1 flex items-center gap-2">
-            <a class="text-[#f5e37f] hover:underline text-xs" href=${data.link}>Github Link</a> |
-            <a class="text-[#f5e37f] hover:underline text-xs" href=${data.link}>Live Link</a>
+            <a class="text-[#f5e37f] hover:underline text-xs" href=${data.link}>Github Link</a>
           </div>
       </div>
     </div>
@@ -68,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /*
   Portfolio Card
-  */
+*/
 
   portfolioData1.forEach((data, index) => {
     portfolio_section.innerHTML += `
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         src=${data.image} alt=${data.name} />
       <p class="text-white pl-2 pt-4">${data.name}</p>
       <p class="text-gray-300 text-sm pl-2 pt-1 font-semibold">
-        Web Development
+       ${data.type}
       </p>
     </div>
   `;
@@ -196,3 +195,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/*
+Form Submit
+*/
+
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const formData = {
+    username: username,
+    email: email,
+    message: message,
+  };
+
+  fetch("https://backend-portfolio-green.vercel.app/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data.message);
+      document.getElementById("form").reset();
+    })
+    .catch((error) => {
+      alert("Message not sent");
+      console.error("Error:", error);
+    });
+});
+

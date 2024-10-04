@@ -1,8 +1,8 @@
-# My Portfolio Website
+# 🖥️ My Portfolio Website
 
 Welcome to my animated portfolio website! This project showcases my skills and projects in web development. It's built using HTML, CSS, and JavaScript.
 
-## Table of Contents
+## 📚 Table of Contents
 
 1. [About](#about)
 2. [Services](#services)
@@ -12,32 +12,36 @@ Welcome to my animated portfolio website! This project showcases my skills and p
 6. [Contact](#contact)
 7. [Installation](#installation)
 8. [Usage](#usage)
+9. [License](#license)
 
-## About
+## 👤 About
 
-This section provides information about me, including what services i offer , experience, and passion for web development.
+This section provides information about me, including the services I offer, my experience, and my passion for web development.
 
-## Services
+## 💼 Services
 
-Here, I describe the services I offer, such as web development, UI/UX design, and consulting.
+Here, I describe the services I offer, such as:
+- Web Development
+- UI/UX Design
+- Consulting
 
-## Testimonials
+## 🌟 Testimonials
 
-This section features testimonial cards from my clients. When you click on a testimonial card, a modal opens to show the detailed feedback.
+This section features testimonial cards from my clients. When you click on a testimonial card, a modal opens to show detailed feedback.
 
-## Skills
+## 🛠️ Skills
 
-In this section, I display my skills. Each card represents a skill, and the bars indicate my proficiency level in that skill and if you hover the percentage of that bar is shown in the form of tooltip.
+In this section, I display my skills. Each card represents a skill, and the bars indicate my proficiency level in that skill. A tooltip shows the percentage of that bar when you hover over it.
 
-## Portfolio
+## 🖼️ Portfolio
 
 This section showcases my projects. When you hover over a project, an eye icon appears, allowing you to view the GitHub repository for that project.
 
-## Contact
+## 📍 Contact
 
 In the contact section, I've embedded a Google Map to show my location and provided a contact form for visitors to get in touch with me.
 
-## Installation
+## 🛠️ Installation
 
 To run this project locally, follow these steps:
 
@@ -51,21 +55,21 @@ To run this project locally, follow these steps:
     ```
 3. Open `index.html` in your browser.
 
-## Usage
+## 🌐 Usage
 
 Simply open `index.html` in your preferred web browser to view the website.
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## 📧 Contact
 
 If you have any questions or feedback, feel free to reach out to me:
 
-- Email: obaidbro9@gmail.com
+- Email: [obaidbro9@gmail.com](mailto:obaidbro9@gmail.com)
 - GitHub: [Your GitHub](https://github.com/whatswrongob)
 
 ---
 
-Thank you for visiting my portfolio website!
+Thank you for visiting my portfolio website! 🎉

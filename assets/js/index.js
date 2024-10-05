@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   portfolioData1.forEach((data, index) => {
     portfolio_section.innerHTML += `
-    <div id="portfolio_card_${index}" class="max-w-[270px] h-[280px] relative mb-0 md:mb-5">
+    <div id="portfolio_card_${index}" class="max-w-[270px] sm:h-[280px] relative mb-0 md:mb-5">
       <img loading="lazy" class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500 cursor-pointer"
         src=${data.image} alt=${data.name} />
       <p class="text-white pl-2 pt-4">${data.name}</p>

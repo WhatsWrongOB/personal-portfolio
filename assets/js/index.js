@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const setProjectModalContent = (data) => {
     modal.innerHTML = `
     <div
-    class="sidebar_animation flex flex-col md:flex-row justify-center items-center w-[95%] sm:w-[670px] h-auto md:h-[280px] section-border bg-[#202021] rounded-2xl relative md:static">
+    class="sidebar_animation flex flex-col md:flex-row justify-center items-center w-[95%] sm:w-[670px] h-auto md:h-[295px] section-border bg-[#202021] rounded-2xl relative md:static">
     <div class="w-full md:w-[25%] h-full flex md:justify-center items-start pl-4 pb-4 md:pl-0">
       <div class="mt-5 md:mt-10 section-border w-[60px] xl:w-[80px] h-[60px] xl:h-[80px] overflow-hidden rounded-2xl">
         <img class="w-full h-full" src=${data.image} alt=${data.name} />
@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <div>
         <h3 class="text-[1.1rem] md:text-[1.2rem] font-semibold">${data.name}
         </h3>
-        <p class="py-1 text-[0.95rem]"><strong>Tech:</strong> ${data.tech}</p>
-        <p class="text-[0.95rem] md:text-base"><strong>Description:</strong> ${data.description}</p>
-          <div class="mt-1 flex items-center gap-2">
+        <p class="py-1 text-[0.9rem]"><strong>Tech:</strong> ${data.tech}</p>
+        <p class="text-[0.9rem]"><strong>Description:</strong> ${data.description}</p>
+          <div class="mt-2 flex items-center gap-2">
             <a class="text-[#f5e37f] hover:underline text-xs" href=${data.link}>Github Link</a>
           </div>
       </div>

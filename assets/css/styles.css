@@ -11,21 +11,22 @@ body {
   color: rgb(218, 206, 206);
 }
 
-#resume p, #resume li{
+#resume p,
+#resume li {
   font-size: 0.94rem;
   color: #c1c0c0;
   line-height: 25px;
 }
 
-@media screen and (max-width:500px) {
-  #resume p, #resume li{
+@media screen and (max-width: 500px) {
+  #resume p,
+  #resume li {
     font-size: 0.9rem;
   }
-  
 }
 
-#resume a:hover{
-  border-bottom:1px solid gold;
+#resume a:hover {
+  border-bottom: 1px solid gold;
 }
 
 /*-----------------------------------*\

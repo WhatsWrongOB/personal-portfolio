@@ -1,4 +1,3 @@
-
 const testimonailData = [
   {
     name: "Sohaib",
@@ -37,7 +36,6 @@ const testimonailData = [
     date: "14 June, 2024",
   },
 ];
-
 
 const fetchPortfolio = async () => {
   try {

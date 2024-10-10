@@ -1,8 +1,6 @@
 import { testimonailData, fetchPortfolio, fetchSkills } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
- 
-
   const sidebarMenu = document.getElementById("sidebar_menu");
   const hamburger = document.getElementById("hamburger");
   const close_modal = document.getElementById("close_modal");
@@ -71,9 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
   Portfolio Card
 */
 
-fetchPortfolio().then((portfolioData) => {
-  portfolioData.forEach((data, index) => {
-    portfolio_section.innerHTML += `
+  const showPortfolioData = async () => {
+    const portfolioData = await fetchPortfolio();
+    portfolioData.length === 0 ? portfolio_section.innerHTML = "loading..." :
+    portfolioData.forEach((data, index) => {
+      portfolio_section.innerHTML += `
     <div id="portfolio_card_${index}" class="max-w-[78%] sm:max-w-[30%] sm:min-h-[290px] sm:max-h-[35%] relative mb-0 md:mb-5">
       <img loading="lazy" class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500 cursor-pointer"
         src=${data.image} alt=${data.name} />
@@ -83,47 +83,48 @@ fetchPortfolio().then((portfolioData) => {
       </p>
     </div>
   `;
-  });
-})
+    });
+  };
 
- 
   /*
   Skill Card
   */
 
-  fetchSkills().then((skillsData) => {
+  const showSkillsData = async () => {
+    const skillsData = await fetchSkills();
+    skillsData.length === 0 ? skills_section.innerHTML = "loading..." :
     skillsData.forEach((data, index) => {
       skills_section.innerHTML += `
-      <div id="skill_card_${index}" class="float-animation w-[98%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
-      <div class="w-[25%] flex justify-end pb-9 pr-5">
-        <img loading="lazy" class="w-[40px]" src=${data.icon} alt=${data.name} />
-      </div>
-      <div class="w-[75%] pr-3 pb-1">
-        <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>
-        <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
-          ${data.description}
-        </p>
-       <div class="relative">
-       <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden">
-       <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
-       </div>
-      <div class="tooltip bg-white text-black font-semibold text-xs rounded py-1 px-2 absolute top-3 right-[50px] z-10">
-          ${data.proficiency}%
-       </div>
-       </div>
-      </div>
+    <div id="skill_card_${index}" class="float-animation w-[98%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
+    <div class="w-[25%] flex justify-end pb-9 pr-5">
+      <img loading="lazy" class="w-[40px]" src=${data.icon} alt=${data.name} />
     </div>
-      `;
+    <div class="w-[75%] pr-3 pb-1">
+      <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>
+      <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+        ${data.description}
+      </p>
+     <div class="relative">
+     <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden">
+     <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
+     </div>
+    <div class="tooltip bg-white text-black font-semibold text-xs rounded py-1 px-2 absolute top-3 right-[50px] z-10">
+        ${data.proficiency}%
+     </div>
+     </div>
+    </div>
+  </div>
+    `;
     });
-  })
+  };
 
- 
   /*
   Testimonial Card
   */
 
-  testimonailData.forEach((data, index) => {
-    testimonial_section.innerHTML += `
+  const showTestimonilData = () => {
+    testimonailData.forEach((data, index) => {
+      testimonial_section.innerHTML += `
       <div
         id="testimonial_card_${index}"
         class="mt-16 flex flex-col items-center xl:flex-row gap-16 xl:gap-5 min-w-full sm:min-w-[95%] xl:min-w-[48%] skill-border rounded-2xl cursor-pointer">
@@ -143,7 +144,8 @@ fetchPortfolio().then((portfolioData) => {
         </div>
       </div>
     `;
-  });
+    });
+  };
 
   hamburger.addEventListener("click", () => {
     sidebarMenu.classList.toggle("hidden");
@@ -163,11 +165,12 @@ fetchPortfolio().then((portfolioData) => {
     }
   });
 
-  portfolio_section.addEventListener("click", (event) => {
+  portfolio_section.addEventListener("click", async (event) => {
     const card = event.target.closest("[id^='portfolio_card_']");
     if (card) {
       const index = card.id.split("_")[2];
-      setProjectModalContent(portfolioData1[index]);
+      const portfolioData = await fetchPortfolio();
+      setProjectModalContent(portfolioData[index]);
       modal.classList.add("flex");
       modal.classList.remove("hidden");
     }
@@ -201,27 +204,27 @@ fetchPortfolio().then((portfolioData) => {
       }
     });
   });
+
+  showPortfolioData();
+  showSkillsData();
+  showTestimonilData();
 });
 
 /*
 Form Submit
 */
 
-const button = document.getElementById("button")
+const button = document.getElementById("button");
 
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
 
   button.disabled = true;
 
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
   const formData = {
-    username: username,
-    email: email,
-    message: message,
+    username: document.getElementById("username").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
   };
 
   fetch("https://obaidbro.vercel.app/api/message", {
@@ -242,4 +245,3 @@ document.getElementById("form").addEventListener("submit", (e) => {
       button.disabled = false;
     });
 });
-

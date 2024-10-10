@@ -1,6 +1,8 @@
-import { skillsData, portfolioData1, testimonailData } from "./data.js";
+import { testimonailData, fetchPortfolio, fetchSkills } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+ 
+
   const sidebarMenu = document.getElementById("sidebar_menu");
   const hamburger = document.getElementById("hamburger");
   const close_modal = document.getElementById("close_modal");
@@ -69,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
   Portfolio Card
 */
 
-  portfolioData1.forEach((data, index) => {
+fetchPortfolio().then((portfolioData) => {
+  portfolioData.forEach((data, index) => {
     portfolio_section.innerHTML += `
     <div id="portfolio_card_${index}" class="max-w-[78%] sm:max-w-[30%] sm:min-h-[290px] sm:max-h-[35%] relative mb-0 md:mb-5">
       <img loading="lazy" class="w-full rounded-xl hover:scale-105 transition ease-in-out duration-500 cursor-pointer"
@@ -81,36 +84,40 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
   });
+})
 
+ 
   /*
   Skill Card
   */
 
-  skillsData.forEach((data, index) => {
-    skills_section.innerHTML += `
-    <div id="skill_card_${index}" class="float-animation w-[98%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
-    <div class="w-[25%] flex justify-end pb-9 pr-5">
-      <img loading="lazy" class="w-[40px]" src=${data.icon} alt=${data.name} />
+  fetchSkills().then((skillsData) => {
+    skillsData.forEach((data, index) => {
+      skills_section.innerHTML += `
+      <div id="skill_card_${index}" class="float-animation w-[98%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
+      <div class="w-[25%] flex justify-end pb-9 pr-5">
+        <img loading="lazy" class="w-[40px]" src=${data.icon} alt=${data.name} />
+      </div>
+      <div class="w-[75%] pr-3 pb-1">
+        <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>
+        <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
+          ${data.description}
+        </p>
+       <div class="relative">
+       <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden">
+       <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
+       </div>
+      <div class="tooltip bg-white text-black font-semibold text-xs rounded py-1 px-2 absolute top-3 right-[50px] z-10">
+          ${data.proficiency}%
+       </div>
+       </div>
+      </div>
     </div>
-    <div class="w-[75%] pr-3 pb-1">
-      <h4 class="text-white xl:text-[1.15rem] font-medium">${data.name}</h4>
-      <p class="text-[0.9rem] font-medium text-[#c7c5c5] pt-1">
-        ${data.description}
-      </p>
-     <div class="relative">
-     <div class="mt-3 section-border w-[90%] h-[7px] rounded-xl bg-[#383838] overflow-hidden">
-     <div class="h-full w-[${data.proficiency}%] bg-[#FFC260]"></div>
-     </div>
-    <div class="tooltip bg-white text-black font-semibold text-xs rounded py-1 px-2 absolute top-3 right-[50px] z-10">
-        ${data.proficiency}%
-     </div>
-     </div>
-    </div>
-  </div>
-  
-    `;
-  });
+      `;
+    });
+  })
 
+ 
   /*
   Testimonial Card
   */
@@ -217,7 +224,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
     message: message,
   };
 
-  fetch("https://backend-portfolio-green.vercel.app/contact", {
+  fetch("https://obaidbro.vercel.app/api/message", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -226,7 +233,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      alert(data.message);
+      alert("Message Send Successfully");
       document.getElementById("form").reset();
       button.disabled = false;
     })

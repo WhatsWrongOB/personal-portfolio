@@ -1,7 +1,7 @@
 const testimonailData = [
   {
     name: "Sohaib",
-    icon: "./assets/images/avatar-1.png",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -10,7 +10,7 @@ const testimonailData = [
   },
   {
     name: "Noman",
-    icon: "./assets/images/avatar-1.png",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -19,7 +19,7 @@ const testimonailData = [
   },
   {
     name: "Jamal",
-    icon: "./assets/images/avatar-1.png",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:
@@ -28,7 +28,7 @@ const testimonailData = [
   },
   {
     name: "Mujtaba",
-    icon: "./assets/images/avatar-1.png",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
     message:
       "Obaid was hired to create a corporate identity. We were very pleased with the work",
     explainedMessage:

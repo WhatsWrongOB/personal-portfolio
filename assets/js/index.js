@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       testimonial_section.innerHTML += `
       <div
         id="testimonial_card_${index}"
-        class="mt-16 flex flex-col items-center xl:flex-row gap-16 xl:gap-5 min-w-full sm:min-w-[95%] xl:min-w-[48%] skill-border rounded-2xl cursor-pointer">
+        class="mt-16 flex flex-col items-center xl:flex-row gap-16 xl:gap-5 min-w-full sm:min-w-[400px] xl:min-w-[48%] skill-border rounded-2xl cursor-pointer">
         <div class="w-full xl:w-[full] h-[135px] flex justify-center items-center rounded-2xl relative">
           <div
             class="section-border w-[60px] xl:w-[80px] h-[60px] xl:h-[80px] bg-[#383839] rounded-2xl absolute top-[-30px] xl:top-[-40px] left-[30px]">

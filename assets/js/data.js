@@ -1,41 +1,42 @@
 const testimonailData = [
   {
+    name: "Hamid",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
+    message:
+      "Obaid developed a custom inventory management system for my business. The experience was seamless.",
+    explainedMessage:
+      "Obaid developed a custom inventory management system for my business. The experience was seamless and professional. He understood our business needs, automated critical stock processes, and made tracking effortless. His attention to detail and dedication to client satisfaction really stood out. Highly recommended for anyone needing a reliable solution.",
+    date: "10 Jan, 2025",
+  },
+  {
+    name: "David",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
+    message:
+      "Obaid built a Next.js form integration for my GHL project. He nailed it with speed and precision.",
+    explainedMessage:
+      "Obaid built a Next.js form integration for my Go High Level (GHL) project. He nailed it with speed and precision. The form submission and backend logic were perfectly handled. He's technically strong and communicates clearly, which made the entire experience smooth and efficient. Would gladly work with him again.",
+    date: "25 Feb, 2025",
+  },
+  {
+    name: "Aneeb",
+    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
+    message:
+      "Obaid developed a complete Smart School System tailored for our needs. Everything works smoothly.",
+    explainedMessage:
+      "Obaid developed a complete Smart School System tailored for our needs. Everything works smoothly and efficiently. From student records to attendance, fee tracking, and reporting – he covered it all. He’s very responsive to feedback and delivers quality on time. Great experience working with him on this project.",
+    date: "03 February, 2025",
+  },
+  {
     name: "Sohaib",
     icon: "https://obaidbroimages.netlify.app/avatar-1.png",
     message:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work",
+      "Obaid developed a rental car website for us. The design and functionality were exactly what we needed.",
     explainedMessage:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-    date: "14 June, 2024",
-  },
-  {
-    name: "Noman",
-    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
-    message:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work",
-    explainedMessage:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-    date: "14 June, 2024",
-  },
-  {
-    name: "Jamal",
-    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
-    message:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work",
-    explainedMessage:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-    date: "14 June, 2024",
-  },
-  {
-    name: "Mujtaba",
-    icon: "https://obaidbroimages.netlify.app/avatar-1.png",
-    message:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work",
-    explainedMessage:
-      "Obaid was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-    date: "14 June, 2024",
-  },
+      "Obaid developed a rental car website for us. The design and functionality were exactly what we needed. He built a user-friendly platform with real-time booking features and a clean UI. His work ethic and ability to translate requirements into a working solution were outstanding. We're very happy with the final product.",
+    date: "20 Dec, 2024",
+  }  
 ];
+
 
 const fetchPortfolio = async () => {
   try {

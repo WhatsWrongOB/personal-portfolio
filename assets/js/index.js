@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     skillsData.length === 0 ? skills_section.innerHTML = "loading..." :
     skillsData.forEach((data, index) => {
       skills_section.innerHTML += `
-    <div id="skill_card_${index}" class="float-animation w-[98%] md:max-w-[46%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
+    <div id="skill_card_${index}" class="float-animation w-[95%] md:max-w-[46%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
     <div class="w-[25%] flex justify-end pb-9 pr-5">
       <img loading="lazy" class="w-[40px]" src=${data.icon} alt=${data.name} />
     </div>

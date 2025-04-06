@@ -163,28 +163,22 @@
            Main
        -->
     <section
-      class="about w-[98%] md:w-[90%] xl:w-[70%] max-h-auto min-h-[100vh] section-border rounded-2xl static xl:relative overflow-hidden mb-8 xl:mb-0 bg-[#1E1E1F]">
+      class="about w-[97%] md:w-[90%] xl:w-[70%] max-h-auto min-h-[100vh] section-border rounded-2xl static xl:relative overflow-hidden mb-8 xl:mb-0 bg-[#1E1E1F]">
       <!-- 
             Menu
         -->
       <nav
-        class="w-full xl:w-[450px] h-[65px] section-border bg-[#282829] rounded-2xl fixed bottom-0 right-0 xl:absolute xl:right-[-10px] xl:top-[-5px] xl:block z-40 flex justify-center items-center md:px-3">
+        class="w-full xl:w-[380px] h-[65px] section-border bg-[#282829] rounded-xl sm:rounded-2xl fixed bottom-0 xl:absolute xl:right-[-10px] xl:top-[-5px] xl:block z-40 flex justify-center items-center md:px-3">
         <ul
-          class="w-full h-full flex gap-6 sm:gap-10 xl:gap-7 justify-center xl:justify-around items-center pl-6 xl:pl-4 pr-5 pt-1">
+          class="w-full h-full flex gap-8 sm:gap-10 xl:gap-7 justify-center xl:justify-around items-center pl-6 xl:pl-4 pr-5 pt-1">
           <button data-nav-link="about">
             <li
               class="text-gray-200 text-[0.75rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567] flex flex-col xl:flex-row items-center xl:gap-2 gap-1">
-              <i class="xl:hidden text-gray-300 fas fa-user text-[1.1rem] hover:text-[#E5C567]"></i>
+              <i class="xl:hidden text-gray-300 fas fa-home text-[1.1rem] hover:text-[#E5C567]"></i>
               About
             </li>
           </button>
-          <button data-nav-link="resume">
-            <li
-              class="text-gray-200 text-[0.75rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567] flex flex-col xl:flex-row items-center xl:gap-2 gap-1">
-              <i class="xl:hidden text-gray-300 fas fa-file-alt text-[1.1rem] hover:text-[#E5C567]"></i>
-              Resume
-            </li>
-          </button>
+
           <button data-nav-link="skills">
             <li
               class="text-gray-200 text-[0.75rem] xl:text-[0.9rem] font-semibold hover:text-[#E5C567] flex flex-col xl:flex-row items-center xl:gap-2 gap-1">
@@ -230,6 +224,16 @@
             expectations. When not coding, you might find me exploring nature
             or diving into a new book.
           </p>
+
+          <a target="_blank" href="/assets/public/obaid.pdf">
+            <button
+              class="group relative overflow-hidden text-sm py-3 px-8 mt-6 mb-3 sm:mb-0 bg-gradient-to-r from-[#E5C567] via-[#d4af37] to-[#E5C567] text-gray-900 font-semibold rounded-full hover:shadow-lg hover:shadow-[#E5C567]/30 transition-all duration-300">
+              <span class="relative z-10 flex items-center justify-center gap-2">
+                <i class="fas fa-download text-sm"></i>
+                Download Resume
+              </span>
+            </button>
+          </a>
         </div>
         <!-- 
            Services
@@ -315,131 +319,7 @@
           </div>
         </div>
       </article>
-      <!-- 
-        Resume
-       -->
-      <article data-page="resume" id="resume" class="sidebar_animation backdrop-blur">
-        <div class="max-w-4xl mx-auto px-4 md:p-8 shadow-lg mt-6 md:mt-10">
-          <header class="mb-8">
-            <h1 class="text-xl md:text-4xl font-bold">Obaid Ali Siddiqui</h1>
-            <p class="text-lg text-white py-1">obaidbro9@gmail.com</p>
-            <p class="text-lg">
-              <a target="_blank" href="https://www.linkedin.com/in/obaid-ali-559a6b288/"
-                class="text-[#E5C567] font-semibold">LinkedIn Profile</a>
-              |
-              <a target="_blank" href="https://github.com/WhatsWrongOB/" class="text-[#E5C567] font-semibold">GitHub
-                Profile</a>
-            </p>
-          </header>
-          <section class="mb-8">
-            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">
-              Objective
-            </h2>
-            <p>
-              Aspiring MERN Stack Developer with a Bachelor’s in Information
-              Technology from Islamia College affiliated with Punjab
-              University. Proficient in building scalable web applications
-              with a strong foundation in front-end and back-end technologies.
-              Seeking to leverage my skills in HTML, CSS, JavaScript, React,
-              TypeScript, Redux, Node.js, Express, and MongoDB to contribute
-              to innovative projects and grow as a software developer.
-            </p>
-          </section>
-          <section class="mb-8">
-            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">
-              Education
-            </h2>
-            <p>
-              <strong>Bachelor of Science in Information Technology</strong>
-            </p>
-            <p>GIGCCL Affilated with Punjab University, 2025</p>
 
-          </section>
-          <section class="mb-8">
-            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">
-              Projects
-            </h2>
-
-            <div class="mb-4">
-              <h3 class="text-[1.03rem] font-semibold">
-                1. AI-Driven Human Resource Management System
-              </h3>
-              <p>
-                <strong>Technologies:</strong> MongoDB, Express, React, Node.js, Gemini AI
-              </p>
-              <p>
-                <strong>Description:</strong> Created a comprehensive HRMS for Metro Cash & Carry to streamline employee management, attendance tracking, leave management, and complaint handling. Integrated AI to assign substitute shifts automatically and analyze employee sentiment via feedback, enhancing overall HR efficiency.
-              </p>
-            </div>
-
-
-            <div class="mb-4">
-              <h3 class="text-[1.03rem] font-semibold">2. E-commerce Website</h3>
-              <p>
-                <strong>Technologies:</strong> React, Redux, Node.js, Express,
-                MongoDB
-              </p>
-              <p>
-                <strong>Description:</strong> Created a responsive e-commerce
-                platform with product listings, a shopping cart, and payment
-                integration. Used Redux for state management and implemented
-                RESTful APIs for backend functionality.
-              </p>
-            </div>
-          </section>
-          <section class="mb-8">
-            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">
-              Skills
-            </h2>
-            <ul class="list-disc ml-5">
-              <li>
-                <strong>Frontend Development:</strong> HTML, CSS, JavaScript, TypeScript
-                React, Nextr.js,
-              </li>
-              <li><strong>State Management:</strong> Redux, Redux Toolkit, Zustand</li>
-              <li>
-                <strong>Backend Development:</strong> Node.js, Express,
-                MongoDB
-              </li>
-              <li>
-                <strong>Tools & Technologies:</strong> Vscode, Git, GitHub,
-                Npm, Docker
-              </li>
-              <li>
-                <strong>Soft Skills:</strong> Communication, Problem-Solving,
-                Team Collaboration
-              </li>
-            </ul>
-          </section>
-          <section class="mb-8">
-            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">
-              Projects on GitHub
-            </h2>
-            <ul class="list-disc ml-5">
-              <li>
-                <a target="_blank" href="https://github.com/WhatsWrongOB/AI-HRMS"
-                  class="text-[#E5C567] font-semibold">AI HRMS</a>
-              </li>
-              <li>
-                <a target="_blank" href="https://github.com/WhatsWrongOB/mern-ecommerce"
-                  class="text-[#E5C567] font-semibold">E-commerce Website</a>
-              </li>
-            </ul>
-          </section>
-          <section class="mb-8">
-            <h2 class="text-xl font-bold border-b-2 border-gray-300 pb-2 mb-4">
-              Additional Information
-            </h2>
-            <ul class="list-disc ml-5">
-              <li><strong>Languages:</strong> English, Urdu</li>
-              <li>
-                <strong>Hobbies:</strong> Coding Challenges, Reading Tech
-                Blogs
-              </li>
-            </ul>
-          </section>
-        </div>
-      </article>
       <!-- 
            Portfolio
         -->

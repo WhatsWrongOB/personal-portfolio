@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const showPortfolioData = async () => {
     const portfolioData = await fetchPortfolio();
-    portfolioData.length === 0 ? portfolio_section.innerHTML = "loading..." :
+    portfolioData.length === 0 ? portfolio_section.innerHTML =`<div class="sm:h-[110vh] flex justify-center pt-[20vh]">
+    <p class="text-white">loading...</p>
+    </div>`:
     portfolioData.forEach((data, index) => {
       portfolio_section.innerHTML += `
     <div id="portfolio_card_${index}" class="max-w-[280px] sm:min-h-[290px] sm:max-h-[35%] relative mb-0 md:mb-5">
@@ -92,7 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const showSkillsData = async () => {
     const skillsData = await fetchSkills();
-    skillsData.length === 0 ? skills_section.innerHTML = "loading..." :
+    skillsData.length === 0 ? skills_section.innerHTML = `<div class="sm:h-[110vh] flex justify-center pt-[20vh]">
+    <p class="text-white">loading...</p>
+    </div>`:
     skillsData.forEach((data, index) => {
       skills_section.innerHTML += `
     <div id="skill_card_${index}" class="float-animation w-[95%] md:max-w-[46%] xl:w-[400px] h-[140px] flex justify-center items-center rounded-2xl skill-border cursor-pointer">
